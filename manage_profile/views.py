@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Users, Logins
 
-
 # Create your views here.
 
 
@@ -49,11 +48,10 @@ def resigter(request):
         userObj = request.POST
         if not Users.objects.filter(email_id__exact=userObj['email']).exists():
             Users.objects.create(first_name=userObj['first_name'], last_name=userObj['last_name'], email_id=userObj['email'], password=userObj['password'],
-                            country=userObj['country'])
-            return render(request, 'sign_up.html',
-                          {'message': 'Log-in to continue'.format(userObj['email'])})
+                            secondary_email_id=userObj['secondary_email'], country=userObj['country'])
+            return render(request, 'index.html',
+                          {'message': '{} Log-in to continue'.format(userObj['email'])})
         else:
             return render(request, 'index.html', {'message': 'User with email {} already exists'.format(userObj['email'])})
     else:
         return render(request, 'index.html')
-
