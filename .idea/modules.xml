@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DjangoProjects.iml" filepath="$PROJECT_DIR$/.idea/DjangoProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LinearAlgebra/.idea/LinearAlgebra.iml" filepath="$PROJECT_DIR$/../LinearAlgebra/.idea/LinearAlgebra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Practice/.idea/Practice.iml" filepath="$PROJECT_DIR$/../Practice/.idea/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Prediction/.idea/Prediction.iml" filepath="$PROJECT_DIR$/../Prediction/.idea/Prediction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/../.idea/PycharmProjects.iml" />
+    </modules>
+  </component>
+</project>

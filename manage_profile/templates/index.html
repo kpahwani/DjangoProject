@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in | Sign up</title>
+</head>
+<body>
+    {% if message %}
+        <h1>{{ message }}</h1>
+    {% endif %}
+    <a href="{% url 'manage_profile:sign_up' %}"><input type="button" value="Sign up"/></a>
+    <form action="{% url 'manage_profile:login' %}" method="post">
+        {% csrf_token %}
+        <label>Email</label>
+        <input type="text" name="email" id="email"/><br>
+        <label>Password</label>
+        <input type="password" name="password" id="password"/><br>
+        <input type="submit" value="Log In">
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
+<body>
+    {% if message %}
+        <h1>{{ message }}</h1>
+    {% endif %}
+    <form action="{% url 'manage_profile:register' %}" method="post">
+        {% csrf_token %}
+        <label>First name</label>
+        <input type="text" name="first_name" id="first_name" required/><br>
+        <label>Last name</label>
+        <input type="text" name="last_name" id="last_name" required/><br>
+        <label>Email</label>
+        <input type="email" name="email" id="email" required/><br>
+        <label>Password</label>
+        <input type="password" name="password" id="password" required/><br>
+        <label>Country</label>
+        <input type="text" name="country" id="country" required/><br>
+        <input type="submit" value="Sign up">
+    </form>
+</body>
+</html>
